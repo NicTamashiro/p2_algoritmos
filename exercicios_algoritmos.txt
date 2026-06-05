@@ -586,52 +586,27 @@ a) Escreva uma funcao ehArmstrong(n) recursiva para extrair digitos
 b) Liste todos os numeros de Armstrong entre 1 e 1000
 
 
-==============================================================
-  GABARITO / DICAS DE RESOLUCAO
-==============================================================
+---------------------------------------
+EXTRA
 
-DICA 1.1 (Insertion Sort):
-  para i de 1 ate n-1:
-    chave = v[i]; j = i-1
-    enquanto j>=0 e v[j]>chave: v[j+1]=v[j]; j--
-    v[j+1] = chave
+0)Faça um algoritmo que leia um nome completo e apresente apenas o
+ultimo sobrenome seguido de vírgula e nome:
+Vitor Oliveira Kuribara (entrada)
+Kuribara, Vitor Oliveira (saída)
 
-DICA 2.1 (Pesquisa Binaria Iterativa):
-  ini=0; fim=n-1
-  enquanto ini<=fim:
-    meio=(ini+fim)/2
-    se v[meio]==alvo: retorna meio
-    se v[meio]<alvo: ini=meio+1
-    senao: fim=meio-1
-  retorna -1
+1) Desenvolva um subprograma que recebe dois números de uma
+função principal. O subprograma compara e imprime o maior deles
+ou escreve iguais! se os dois números tem o mesmo valor.
 
-DICA 3.1 (Fatorial):
-  fatorial(0) = 1
-  fatorial(n) = n * fatorial(n-1)
+2) Faça um algoritmo que recebe 4 números de um vetor notas, e
+calcula a média aritmética entre eles, através de uma função
+calc_media(), que retorna o valor da média.
 
-DICA 3.7 (Hanoi):
-  hanoi(n, origem, destino, auxiliar):
-    se n==1: imprime "mover de origem para destino"
-    hanoi(n-1, origem, auxiliar, destino)
-    imprime "mover de origem para destino"
-    hanoi(n-1, auxiliar, destino, origem)
+3) Implemente um algoritmo que recebe uma matriz de dimensões e
+elementos definidos pelo usuário, verifica se é uma matriz quadrada,
+e caso positivo, imprime a soma dos valores de sua diagonal
+principal (dois subprogramas).
 
-DICA 5.9 (Mesclar Vetores):
-  i=0; j=0; k=0
-  enquanto i<n1 e j<n2:
-    se v1[i]<=v2[j]: v3[k++]=v1[i++]
-    senao: v3[k++]=v2[j++]
-  copiar elementos restantes de v1 ou v2
+4) Adapte o algoritmo de ordenação por inserção gerando um
+vetor em ordem decrescente.
 
-DICA 6.4 (Transposta in-place):
-  para i de 0 ate n-1:
-    para j de i+1 ate n-1:
-      trocar M[i][j] com M[j][i]
-
-==============================================================
-  FIM DOS EXERCICIOS
-==============================================================
-Total: 12 (Insertion Sort) + 7 (Pesquisa Binaria) + 10 (Recursividade)
-     + 12 (Strings) + 12 (Vetores) + 12 (Matrizes)
-     + 12 (Funcoes) + 8 (Integradores) = 85 exercicios
-==============================================================
