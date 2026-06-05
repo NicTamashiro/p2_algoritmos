@@ -1,0 +1,637 @@
+==============================================================
+       EXERCICIOS DE ALGORITMOS - PROVA DE PREPARACAO
+==============================================================
+Topicos: Insertion Sort | Pesquisa Binaria | Recursividade
+         Strings | Vetores | Matrizes | Funcoes
+==============================================================
+
+
+==============================================================
+  SECAO 1: INSERTION SORT
+==============================================================
+
+EXERCICIO 1.1 - Basico
+------------------------
+Implemente o algoritmo Insertion Sort para ordenar um vetor
+de inteiros em ordem CRESCENTE.
+- Entrada: vetor v[] e seu tamanho n
+- Saida: vetor ordenado (in-place, sem retorno)
+- Exemplo: v = {5, 2, 8, 1, 9} -> v = {1, 2, 5, 8, 9}
+
+EXERCICIO 1.2 - Ordem Decrescente
+------------------------------------
+Modifique o Insertion Sort para ordenar em ordem DECRESCENTE.
+- Entrada: vetor v[] e seu tamanho n
+- Saida: vetor ordenado em ordem decrescente
+- Exemplo: v = {3, 1, 7, 4} -> v = {7, 4, 3, 1}
+
+EXERCICIO 1.3 - Rastreamento Manual
+--------------------------------------
+Dado o vetor v = {64, 25, 12, 22, 11}, mostre o estado do
+vetor apos cada iteracao do Insertion Sort.
+Escreva o vetor apos cada passo (i = 1, 2, 3, 4).
+
+EXERCICIO 1.4 - Contagem de Comparacoes
+-----------------------------------------
+Implemente o Insertion Sort que, alem de ordenar, CONTA
+e retorna o numero total de comparacoes realizadas.
+- Use uma variavel global ou por referencia para o contador
+- Teste com: {1,2,3,4,5} e {5,4,3,2,1}. Compare os resultados.
+
+EXERCICIO 1.5 - Strings com Insertion Sort
+--------------------------------------------
+Adapte o Insertion Sort para ordenar um vetor de STRINGS
+em ordem alfabetica.
+- Entrada: vetor de strings e seu tamanho
+- Exemplo: {"banana", "abacate", "caju"} -> {"abacate", "banana", "caju"}
+
+EXERCICIO 1.6 - Insertion Sort Recursivo
+------------------------------------------
+Implemente uma versao RECURSIVA do Insertion Sort.
+Dica: Para ordenar n elementos, primeiro ordene os n-1
+primeiros, depois insira o ultimo na posicao correta.
+
+EXERCICIO 1.7 - Subcadeia Ordenada
+--------------------------------------
+Dado um vetor v[] de tamanho n, ordene apenas o subvetor
+de indice L ate R (inclusive) usando Insertion Sort.
+Os elementos fora do intervalo nao devem ser alterados.
+- Entrada: v[], n, L, R
+- Exemplo: v={9,1,7,3,5}, L=1, R=3 -> v={9,1,3,7,5}
+
+
+==============================================================
+  SECAO 2: PESQUISA BINARIA
+==============================================================
+
+EXERCICIO 2.1 - Iterativa Basica
+-----------------------------------
+Implemente a Pesquisa Binaria ITERATIVA.
+- Entrada: vetor ordenado v[], tamanho n, valor alvo
+- Saida: indice do alvo, ou -1 se nao encontrado
+- Exemplo: v={2,5,8,12,16,23,38,56,72,91}, alvo=23 -> retorna 5
+
+EXERCICIO 2.2 - Recursiva
+---------------------------
+Implemente a Pesquisa Binaria RECURSIVA.
+- Assinatura: int buscaBinaria(int v[], int inicio, int fim, int alvo)
+- Retorne o indice ou -1 se nao encontrado
+
+EXERCICIO 2.3 - Primeira Ocorrencia
+--------------------------------------
+Dado um vetor ordenado com elementos REPETIDOS, encontre o
+indice da PRIMEIRA ocorrencia do valor alvo.
+- Exemplo: v={1,3,3,3,5,7}, alvo=3 -> retorna 1 (indice 1)
+- Dica: ao encontrar o alvo, continue buscando a esquerda
+
+EXERCICIO 2.4 - Ultima Ocorrencia
+------------------------------------
+Similar ao anterior, mas encontre o indice da ULTIMA ocorrencia.
+- Exemplo: v={1,3,3,3,5,7}, alvo=3 -> retorna 3 (indice 3)
+
+EXERCICIO 2.5 - Menor Maior Que
+---------------------------------
+Dado um vetor ordenado, encontre o MENOR elemento MAIOR
+que um valor alvo (successor).
+- Exemplo: v={1,3,5,7,9,11}, alvo=6 -> retorna 7
+- Retorne -1 se nao existir elemento maior
+
+EXERCICIO 2.6 - Contar Ocorrencias
+-------------------------------------
+Use a Pesquisa Binaria para contar quantas vezes um valor
+aparece em um vetor ordenado, em tempo O(log n).
+- Dica: encontre a primeira e a ultima ocorrencia
+- Exemplo: v={1,2,2,2,3,4}, alvo=2 -> retorna 3
+
+EXERCICIO 2.7 - Verificar se esta Ordenado
+--------------------------------------------
+Antes de realizar a Pesquisa Binaria, escreva uma funcao
+que verifica se o vetor esta ordenado.
+Se nao estiver, ordene com Insertion Sort e entao busque.
+
+
+==============================================================
+  SECAO 3: RECURSIVIDADE
+==============================================================
+
+EXERCICIO 3.1 - Fatorial
+--------------------------
+Implemente uma funcao recursiva para calcular n! (fatorial).
+- fatorial(0) = 1
+- fatorial(n) = n * fatorial(n-1)
+- Teste com n = 0, 1, 5, 10
+
+EXERCICIO 3.2 - Fibonacci
+---------------------------
+Implemente uma funcao recursiva para calcular o n-esimo
+numero da sequencia de Fibonacci.
+- fibonacci(0) = 0, fibonacci(1) = 1
+- fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
+- Calcule fibonacci(10) e mostre a sequencia completa
+
+EXERCICIO 3.3 - Potencia
+--------------------------
+Implemente recursivamente a funcao potencia(base, exp)
+que calcula base^exp.
+- potencia(2, 0) = 1
+- potencia(base, exp) = base * potencia(base, exp-1)
+- Teste: potencia(3, 4) deve retornar 81
+
+EXERCICIO 3.4 - Soma dos Elementos
+-------------------------------------
+Escreva uma funcao recursiva que soma todos os elementos
+de um vetor de inteiros.
+- somaVetor(v, n) = v[n-1] + somaVetor(v, n-1)
+- Caso base: somaVetor(v, 0) = 0
+- Exemplo: v={1,2,3,4,5} -> retorna 15
+
+EXERCICIO 3.5 - Maximo Recursivo
+----------------------------------
+Escreva uma funcao recursiva que encontra o MAIOR valor
+em um vetor de n inteiros.
+- maximo(v, 1) = v[0]
+- maximo(v, n) = max(v[n-1], maximo(v, n-1))
+
+EXERCICIO 3.6 - Inverter Vetor
+--------------------------------
+Escreva uma funcao recursiva que inverte os elementos
+de um vetor IN-PLACE (sem criar outro vetor).
+- inversao(v, inicio, fim): troca v[inicio] com v[fim],
+  depois chama inversao(v, inicio+1, fim-1)
+- Caso base: inicio >= fim
+
+EXERCICIO 3.7 - Torre de Hanoi
+--------------------------------
+Implemente a solucao recursiva para o problema da Torre
+de Hanoi com n discos.
+- Imprima cada movimento no formato: "Mova disco de A para C"
+- Calcule o numero total de movimentos para n = 3 e n = 4
+  (formula: 2^n - 1)
+
+EXERCICIO 3.8 - MDC (Maximo Divisor Comum)
+---------------------------------------------
+Use o algoritmo de Euclides recursivo para calcular o MDC.
+- mdc(a, 0) = a
+- mdc(a, b) = mdc(b, a % b)
+- Exemplo: mdc(48, 18) -> mdc(18, 12) -> mdc(12, 6) -> mdc(6, 0) = 6
+
+EXERCICIO 3.9 - String Palindromo Recursivo
+----------------------------------------------
+Escreva uma funcao recursiva que verifica se uma string
+e palindromo.
+- ehPalindromo(s, inicio, fim)
+- Caso base: inicio >= fim -> retorna verdadeiro
+- Passo: s[inicio] == s[fim] E ehPalindromo(s, inicio+1, fim-1)
+
+EXERCICIO 3.10 - Imprimir Digitos em Ordem
+---------------------------------------------
+Escreva uma funcao recursiva que imprime os digitos de um
+numero inteiro na ordem CORRETA (da esquerda para direita).
+- Dica: imprimeDigitos(n/10) ANTES de imprimir n%10
+- Exemplo: imprimeDigitos(1234) -> 1 2 3 4
+
+
+==============================================================
+  SECAO 4: STRINGS
+==============================================================
+
+EXERCICIO 4.1 - Comprimento
+------------------------------
+Implemente a funcao comprimento(s) que retorna o numero
+de caracteres em uma string (sem usar strlen).
+- Percorra caracter por caracter ate encontrar '\0'
+- Exemplo: comprimento("algoritmo") -> 9
+
+EXERCICIO 4.2 - Inverter String
+---------------------------------
+Escreva uma funcao que INVERTE uma string in-place.
+- Troque o primeiro com o ultimo, o segundo com o penultimo...
+- Exemplo: "abcde" -> "edcba"
+
+EXERCICIO 4.3 - Palindromo
+----------------------------
+Escreva uma funcao que verifica se uma string e palindromo.
+- Ignore maiusculas/minusculas: "Arara" e palindromo
+- Ignore espacos: "A man a plan a canal Panama" e palindromo
+- Retorne 1 (verdadeiro) ou 0 (falso)
+
+EXERCICIO 4.4 - Contar Vogais e Consoantes
+--------------------------------------------
+Dada uma string, conte quantas vogais e quantas consoantes
+ela possui. Ignore espacos e caracteres nao-alfabeticos.
+- Exemplo: "Hello World" -> Vogais: 3, Consoantes: 7
+
+EXERCICIO 4.5 - Maiusculas e Minusculas
+-----------------------------------------
+Escreva duas funcoes:
+a) toMaiusculo(s): converte toda a string para maiusculas
+b) toMinusculo(s): converte toda a string para minusculas
+Sem usar funcoes de biblioteca. Use a diferenca ASCII = 32.
+
+EXERCICIO 4.6 - Contar Ocorrencias de Caracter
+------------------------------------------------
+Escreva uma funcao que conta quantas vezes um caractere
+especifico aparece em uma string.
+- Exemplo: contarChar("mississippi", 's') -> 4
+
+EXERCICIO 4.7 - Remover Espacos
+---------------------------------
+Escreva uma funcao que remove TODOS os espacos de uma string.
+- Exemplo: "ola mundo lindo" -> "olamundolindo"
+- Faca a remocao in-place (sem criar nova string)
+
+EXERCICIO 4.8 - Comparar Strings
+-----------------------------------
+Implemente a funcao comparar(s1, s2) que retorna:
+-  0 se s1 == s2
+- -1 se s1 < s2 (lexicograficamente)
+- +1 se s1 > s2 (lexicograficamente)
+Nao use strcmp.
+
+EXERCICIO 4.9 - Contar Palavras
+---------------------------------
+Dada uma string, conte quantas palavras ela possui.
+Palavras sao separadas por um ou mais espacos.
+- Exemplo: "  ola  mundo  " -> 2 palavras
+
+EXERCICIO 4.10 - Anagrama
+---------------------------
+Escreva uma funcao que verifica se duas strings sao anagramas
+(contem os mesmos caracteres, possivelmente em ordens diferentes).
+- Exemplo: "listen" e "silent" sao anagramas
+- Dica: ordene as duas strings e compare, ou use vetor de frequencias
+
+EXERCICIO 4.11 - Substituir Caracter
+--------------------------------------
+Escreva uma funcao que substitui todas as ocorrencias
+do caracter 'antigo' pelo caracter 'novo' em uma string.
+- Exemplo: substituir("mississippi", 's', 'z') -> "mizzizzippi"
+
+EXERCICIO 4.12 - Verificar se e Numero
+----------------------------------------
+Escreva uma funcao que verifica se uma string representa
+um numero inteiro valido (pode ter sinal + ou - no inicio).
+- "123"  -> valido
+- "-45"  -> valido
+- "12a3" -> invalido
+- ""     -> invalido
+
+
+==============================================================
+  SECAO 5: VETORES
+==============================================================
+
+EXERCICIO 5.1 - Maior e Menor
+--------------------------------
+Escreva funcoes que retornam o MAIOR e o MENOR elemento
+de um vetor de inteiros.
+- Inicialize com o primeiro elemento do vetor
+- Exemplo: v={3,7,1,9,4} -> maior=9, menor=1
+
+EXERCICIO 5.2 - Soma e Media
+-------------------------------
+Escreva funcoes que calculam a SOMA e a MEDIA dos elementos
+de um vetor de floats.
+- Retorne a media como float
+- Exemplo: v={2.0, 4.0, 6.0} -> soma=12.0, media=4.0
+
+EXERCICIO 5.3 - Busca Linear
+------------------------------
+Implemente a busca linear que retorna o INDICE do valor
+buscado, ou -1 se nao encontrado.
+- Exemplo: v={5,3,8,1,7}, alvo=8 -> retorna 2
+
+EXERCICIO 5.4 - Inverter Vetor
+--------------------------------
+Inverta os elementos de um vetor in-place usando dois indices
+(inicio e fim que convergem ao centro).
+- Exemplo: v={1,2,3,4,5} -> v={5,4,3,2,1}
+
+EXERCICIO 5.5 - Remover Duplicatas
+-------------------------------------
+Dado um vetor ORDENADO, remova os elementos duplicados
+e retorne o novo tamanho do vetor.
+- Exemplo: v={1,1,2,3,3,4} -> v={1,2,3,4}, tamanho=4
+
+EXERCICIO 5.6 - Mover Zeros
+-----------------------------
+Dado um vetor, mova todos os zeros para o FIM sem alterar
+a ordem relativa dos elementos nao-zero.
+- Exemplo: v={0,1,0,3,12} -> v={1,3,12,0,0}
+
+EXERCICIO 5.7 - Segundo Maior
+--------------------------------
+Encontre o SEGUNDO MAIOR elemento de um vetor sem ordenar.
+- Cuide para nao considerar o mesmo elemento duas vezes
+- Exemplo: v={12,35,1,10,34,1} -> segundo maior = 34
+
+EXERCICIO 5.8 - Rotacionar Vetor
+----------------------------------
+Rotacione os elementos de um vetor K posicoes para a esquerda.
+- Exemplo: v={1,2,3,4,5}, k=2 -> v={3,4,5,1,2}
+- Dica: copie os primeiros k elementos, desloque o resto, reinsira
+
+EXERCICIO 5.9 - Mesclar Vetores Ordenados
+--------------------------------------------
+Dados dois vetores ORDENADOS v1[n1] e v2[n2], crie um
+terceiro vetor v3[n1+n2] com todos os elementos ordenados.
+- Exemplo: v1={1,3,5}, v2={2,4,6} -> v3={1,2,3,4,5,6}
+
+EXERCICIO 5.10 - Verificar se esta Ordenado
+----------------------------------------------
+Escreva uma funcao que retorna 1 se o vetor esta em ordem
+crescente, e 0 caso contrario.
+- Percorra e verifique se v[i] <= v[i+1] para todo i
+
+EXERCICIO 5.11 - Frequencia de Elementos
+------------------------------------------
+Dado um vetor de inteiros entre 0 e 100, crie um vetor de
+frequencias que conta quantas vezes cada valor aparece.
+- Exemplo: v={3,1,4,1,5,9,2,6,5,3} 
+  -> frequencia[1]=2, frequencia[3]=2, frequencia[5]=2, ...
+
+EXERCICIO 5.12 - Produto Escalar
+----------------------------------
+Calcule o produto escalar de dois vetores de mesmo tamanho.
+- produto_escalar = soma(v1[i] * v2[i]) para i de 0 a n-1
+- Exemplo: v1={1,2,3}, v2={4,5,6} -> 1*4+2*5+3*6 = 32
+
+
+==============================================================
+  SECAO 6: MATRIZES
+==============================================================
+
+EXERCICIO 6.1 - Leitura e Impressao
+--------------------------------------
+Escreva funcoes para ler e imprimir uma matriz M[L][C]
+de inteiros, com L linhas e C colunas.
+- A impressao deve ser formatada linha por linha
+
+EXERCICIO 6.2 - Soma de Matrizes
+-----------------------------------
+Dados duas matrizes A e B de mesma dimensao n x n,
+calcule a matriz soma C = A + B.
+- C[i][j] = A[i][j] + B[i][j]
+
+EXERCICIO 6.3 - Multiplicacao de Matrizes
+--------------------------------------------
+Implemente a multiplicacao de duas matrizes quadradas n x n.
+- C[i][j] = soma(A[i][k] * B[k][j]) para k de 0 a n-1
+- Exemplo: use matrizes 2x2 para verificar manualmente
+
+EXERCICIO 6.4 - Transposta
+----------------------------
+Calcule a matriz transposta de uma matriz n x n.
+- T[i][j] = M[j][i]
+- Implemente IN-PLACE (trocando M[i][j] com M[j][i] para i < j)
+
+EXERCICIO 6.5 - Diagonal Principal e Secundaria
+-------------------------------------------------
+Dada uma matriz quadrada n x n:
+a) Imprima os elementos da diagonal PRINCIPAL (M[i][i])
+b) Imprima os elementos da diagonal SECUNDARIA (M[i][n-1-i])
+c) Calcule a soma de cada diagonal
+
+EXERCICIO 6.6 - Verificar Simetria
+-------------------------------------
+Verifique se uma matriz quadrada n x n e simetrica.
+Uma matriz e simetrica se M[i][j] == M[j][i] para todo i, j.
+- Retorne 1 se simetrica, 0 caso contrario
+
+EXERCICIO 6.7 - Busca em Matriz
+---------------------------------
+Dada uma matriz M[L][C], busque um valor alvo e retorne
+a linha e a coluna onde ele se encontra.
+Se nao encontrado, retorne linha=-1, coluna=-1.
+
+EXERCICIO 6.8 - Maior Elemento por Linha
+------------------------------------------
+Para cada linha de uma matriz M[L][C], encontre e imprima
+o maior elemento daquela linha.
+- Exemplo para matriz 3x4: imprime 3 valores (um por linha)
+
+EXERCICIO 6.9 - Contagem de Pares e Impares
+---------------------------------------------
+Percorra uma matriz M[L][C] e conte quantos elementos
+sao PARES e quantos sao IMPARES.
+
+EXERCICIO 6.10 - Zerar Linha e Coluna
+----------------------------------------
+Se um elemento M[i][j] for igual a zero, coloque TODOS os
+elementos da sua linha e da sua coluna como zero.
+- Faca uma copia da matriz original antes de modificar
+
+EXERCICIO 6.11 - Rotacao 90 Graus
+------------------------------------
+Rotacione uma matriz quadrada n x n em 90 graus no sentido
+horario.
+- Dica: transposta seguida de inversao das colunas
+- Exemplo 3x3:
+  1 2 3       7 4 1
+  4 5 6  ->   8 5 2
+  7 8 9       9 6 3
+
+EXERCICIO 6.12 - Soma em Espiral
+----------------------------------
+Percorra uma matriz M[n][n] em espiral (da borda para o centro)
+e imprima os elementos nessa ordem.
+- Dica: use quatro variaveis: top, bottom, left, right
+- Reduza os limites a cada volta
+
+
+==============================================================
+  SECAO 7: FUNCOES
+==============================================================
+
+EXERCICIO 7.1 - Calculadora Basica
+-------------------------------------
+Escreva quatro funcoes: soma, subtracao, multiplicacao e divisao.
+Todas recebem dois floats e retornam um float.
+A divisao deve verificar divisao por zero e retornar 0.
+
+EXERCICIO 7.2 - Par ou Impar
+------------------------------
+Escreva uma funcao ehPar(n) que retorna 1 se n e par, 0 se impar.
+Escreva outra funcao ehImpar(n) que usa ehPar internamente.
+
+EXERCICIO 7.3 - Maximo entre Tres
+------------------------------------
+Escreva uma funcao que recebe tres inteiros e retorna o maior.
+Sem usar a funcao max da biblioteca.
+
+EXERCICIO 7.4 - Troca de Valores
+----------------------------------
+Escreva uma funcao troca(a, b) que troca os valores de duas
+variaveis usando um parametro por REFERENCIA (ponteiro em C).
+- Sem a passagem por referencia, a troca nao funciona
+
+EXERCICIO 7.5 - Verificar Primo
+---------------------------------
+Escreva uma funcao ehPrimo(n) que retorna 1 se n e primo.
+- Otimizacao: so precisa testar divisores ate sqrt(n)
+- Um numero primo e divisivel apenas por 1 e por si mesmo
+
+EXERCICIO 7.6 - Lista de Primos
+---------------------------------
+Use a funcao ehPrimo do exercicio anterior para listar
+todos os primos entre 2 e N.
+- Exemplo: N=20 -> 2, 3, 5, 7, 11, 13, 17, 19
+
+EXERCICIO 7.7 - Funcao de Ordenacao Generica
+----------------------------------------------
+Escreva uma funcao que ordena um vetor e recebe como
+parametro adicional a DIRECAO: 1 para crescente, -1 para decrescente.
+Use Insertion Sort internamente.
+
+EXERCICIO 7.8 - Calcular IMC
+------------------------------
+Escreva uma funcao calculaIMC(peso, altura) que retorna o IMC
+e outra funcao classificaIMC(imc) que retorna uma string
+indicando a classificacao: "Abaixo do peso", "Normal",
+"Sobrepeso", "Obesidade".
+
+EXERCICIO 7.9 - Estatisticas de Vetor
+----------------------------------------
+Escreva uma funcao estatisticas(v, n) que calcula e imprime:
+- Soma total
+- Media aritmetica
+- Maior e menor elemento
+- Amplitude (maior - menor)
+Retorne a media como float.
+
+EXERCICIO 7.10 - Funcao de Busca com Retorno por Referencia
+--------------------------------------------------------------
+Escreva a funcao:
+  void buscarMinMax(int v[], int n, int *minimo, int *maximo)
+Ela deve encontrar simultaneamente o minimo e o maximo
+do vetor, retornando os dois valores por referencia.
+
+EXERCICIO 7.11 - Validacao de Nota
+-------------------------------------
+Escreva uma funcao validaNota(nota) que:
+- Retorna a nota se estiver entre 0.0 e 10.0
+- Retorna -1 se a nota for invalida
+Use em um programa que le 5 notas e calcula a media
+apenas das notas validas.
+
+EXERCICIO 7.12 - Menu de Operacoes
+-------------------------------------
+Crie um programa com um menu interativo que permite ao usuario:
+  1. Preencher um vetor
+  2. Imprimir o vetor
+  3. Ordenar o vetor (Insertion Sort)
+  4. Buscar um elemento (Pesquisa Binaria)
+  5. Sair
+Cada opcao deve ser implementada em uma funcao separada.
+
+
+==============================================================
+  SECAO 8: EXERCICIOS INTEGRADORES (MISTOS)
+==============================================================
+
+EXERCICIO 8.1 - Pipeline Completo
+------------------------------------
+Escreva um programa que:
+a) Le um vetor de N inteiros
+b) Verifica se ja esta ordenado; se nao estiver, ordena com Insertion Sort
+c) Realiza uma Pesquisa Binaria por um valor fornecido pelo usuario
+d) Imprime a posicao encontrada ou "nao encontrado"
+
+EXERCICIO 8.2 - Frequencia de Letras
+--------------------------------------
+Dada uma string, use um vetor de 26 posicoes para contar
+a frequencia de cada letra do alfabeto (ignorar maiusculas/minusculas).
+Imprima as letras que aparecem com sua frequencia, em ordem alfabetica.
+
+EXERCICIO 8.3 - Ordenar Strings
+---------------------------------
+Dado um vetor de strings, use Insertion Sort para ordena-las
+em ordem alfabetica. Use comparacao caracter a caracter.
+Exemplo: {"zebra","abacate","manga"} -> {"abacate","manga","zebra"}
+
+EXERCICIO 8.4 - Matriz de Frequencias
+---------------------------------------
+Dada uma string de comprimento n (maxima 100),
+crie uma matriz M[26][26] onde M[i][j] conta quantas vezes
+a letra j aparece logo apos a letra i na string.
+Imprima os pares de letras mais frequentes.
+
+EXERCICIO 8.5 - Busca Binaria em Matriz Ordenada
+--------------------------------------------------
+Dada uma matriz M[n][n] onde cada linha esta ordenada
+E cada primeira coluna e maior que a ultima coluna da linha anterior,
+implemente uma busca eficiente para encontrar um valor alvo.
+- Comece no canto superior direito
+- Se alvo < M[i][j]: va para a esquerda (j--)
+- Se alvo > M[i][j]: va para baixo (i++)
+
+EXERCICIO 8.6 - Recursao com Matriz
+--------------------------------------
+Escreva uma funcao recursiva que calcula a SOMA de todos
+os elementos de uma matriz M[n][n].
+Use recursao dupla ou reduza a problema de vetor.
+
+EXERCICIO 8.7 - Anagramas em Vetor
+-------------------------------------
+Dado um vetor de strings, agrupe as que sao anagramas entre si.
+Use vetores de frequencia para verificar se duas strings
+sao anagramas, e Insertion Sort para ordenar os grupos.
+
+EXERCICIO 8.8 - Numero de Armstrong
+--------------------------------------
+Um numero de Armstrong (ou narcisista) e aquele em que a
+soma dos seus digitos elevados ao numero de digitos e igual
+ao proprio numero. Exemplo: 153 = 1^3 + 5^3 + 3^3 = 153.
+a) Escreva uma funcao ehArmstrong(n) recursiva para extrair digitos
+b) Liste todos os numeros de Armstrong entre 1 e 1000
+
+
+==============================================================
+  GABARITO / DICAS DE RESOLUCAO
+==============================================================
+
+DICA 1.1 (Insertion Sort):
+  para i de 1 ate n-1:
+    chave = v[i]; j = i-1
+    enquanto j>=0 e v[j]>chave: v[j+1]=v[j]; j--
+    v[j+1] = chave
+
+DICA 2.1 (Pesquisa Binaria Iterativa):
+  ini=0; fim=n-1
+  enquanto ini<=fim:
+    meio=(ini+fim)/2
+    se v[meio]==alvo: retorna meio
+    se v[meio]<alvo: ini=meio+1
+    senao: fim=meio-1
+  retorna -1
+
+DICA 3.1 (Fatorial):
+  fatorial(0) = 1
+  fatorial(n) = n * fatorial(n-1)
+
+DICA 3.7 (Hanoi):
+  hanoi(n, origem, destino, auxiliar):
+    se n==1: imprime "mover de origem para destino"
+    hanoi(n-1, origem, auxiliar, destino)
+    imprime "mover de origem para destino"
+    hanoi(n-1, auxiliar, destino, origem)
+
+DICA 5.9 (Mesclar Vetores):
+  i=0; j=0; k=0
+  enquanto i<n1 e j<n2:
+    se v1[i]<=v2[j]: v3[k++]=v1[i++]
+    senao: v3[k++]=v2[j++]
+  copiar elementos restantes de v1 ou v2
+
+DICA 6.4 (Transposta in-place):
+  para i de 0 ate n-1:
+    para j de i+1 ate n-1:
+      trocar M[i][j] com M[j][i]
+
+==============================================================
+  FIM DOS EXERCICIOS
+==============================================================
+Total: 12 (Insertion Sort) + 7 (Pesquisa Binaria) + 10 (Recursividade)
+     + 12 (Strings) + 12 (Vetores) + 12 (Matrizes)
+     + 12 (Funcoes) + 8 (Integradores) = 85 exercicios
+==============================================================
