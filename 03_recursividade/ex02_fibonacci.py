@@ -3,5 +3,14 @@ Exercicio 02
 Tema: 03_recursividade
 """
 
-if __name__ == "__main__":
-    pass
+def fib(n):
+    if n == 1:
+        return 0
+    if n == 2:
+        return 1
+    
+    return fib(n - 1) + fib(n - 2)
+
+n = 5
+
+print(f"O fibonacci de '{n}' eh = {fib(n)}")
